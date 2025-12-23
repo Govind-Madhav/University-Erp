@@ -36,4 +36,6 @@ async function bootstrap() {
     console.log(`🚀 Server running on http://localhost:${port}/api/v1`);
 }
 
-bootstrap();
+bootstrap().catch((err) => {
+    console.error('Fatal Error during bootstrap:', err);
+});
